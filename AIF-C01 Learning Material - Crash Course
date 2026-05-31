@@ -207,5 +207,5 @@
 
 - **Amazon HealthLake** — A HIPAA-compliant service that stores, normalises, and analyses health data in FHIR format.
 - **Amazon Comprehend Medical** — Extracts medical conditions, medications, dosages, and protected health information from clinical notes.
-- **Amazon Transcribe Medical** — A speech-to-text service tuned for medical terminology and doctor-patient conversations.
+- **Amazon Transcribe Medical** — A speech-to-text service tuned for medical terminology and doctor-patient conversations. 
 ```
