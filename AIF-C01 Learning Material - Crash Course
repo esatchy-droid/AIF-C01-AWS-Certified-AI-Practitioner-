@@ -1,176 +1,211 @@
----
+```md
+# AWS AI/ML Exam Notes
 
-**AI/ML Hierarchy**
-- **Artificial Intelligence** — The broad umbrella discipline where machines are designed to perform tasks that typically require human intelligence, such as playing chess, recognising speech, or making decisions
-- **Machine Learning** — A subset of AI where systems automatically learn and improve from data by finding patterns, without being explicitly programmed for each task
-- **Deep Learning** — A subset of ML that uses neural networks with multiple layers to excel at complex pattern recognition tasks like image classification and natural language processing
-- **Generative AI** — Goes beyond analysing existing data to actually creating new original content such as text, images, audio, or code (e.g. ChatGPT, DALL-E)
-- **Foundation Models** — Large models pre-trained on massive, diverse datasets that have broad general capabilities and can be adapted or fine-tuned for many downstream tasks (e.g. Claude, GPT-4, Titan)
-- **Large Language Models (LLMs)** — A specific type of foundation model that specialises in text understanding and generation, built on transformer architecture (e.g. GPT-3.5, Claude, LLaMA)
-- **Transformer Models** — The architectural backbone of modern LLMs; processes entire sentences simultaneously using attention mechanisms to understand context and relationships between words
-- **Diffusion Models** — Generate high-quality images by learning to gradually remove noise from random data, reversing a corruption process during training (e.g. Stable Diffusion)
-- **GANs (Generative Adversarial Networks)** — Use two competing neural networks — a generator that creates content and a discriminator that detects fakes — to produce highly realistic synthetic outputs through adversarial training
+## AI/ML Hierarchy
 
----
-
-**Learning Types**
-- **Supervised Learning** — Trains on labelled input-output pairs so the model can predict outcomes on new data; covers both classification (e.g. spam detection) and regression (e.g. price prediction)
-- **Unsupervised Learning** — Discovers hidden structure and patterns in unlabelled data using techniques like clustering, dimensionality reduction, and anomaly detection without predefined answers
-- **Semi-supervised Learning** — Combines a small amount of labelled data with a large pool of unlabelled data, making it practical and cost-effective when full labelling is too expensive or time-consuming
-- **Reinforcement Learning** — An agent learns optimal behaviour through trial and error by receiving rewards for good actions and penalties for bad ones; used in games and autonomous systems
+- **Artificial Intelligence** — The broad umbrella discipline where machines are designed to perform tasks that typically require human intelligence, such as playing chess, recognising speech, or making decisions.
+- **Machine Learning** — A subset of AI where systems automatically learn and improve from data by finding patterns, without being explicitly programmed for each task.
+- **Deep Learning** — A subset of ML that uses neural networks with multiple layers to excel at complex pattern recognition tasks like image classification and natural language processing.
+- **Generative AI** — Goes beyond analysing existing data to create new original content such as text, images, audio, or code. Examples include ChatGPT and DALL-E.
+- **Foundation Models** — Large models pre-trained on massive, diverse datasets that have broad general capabilities and can be adapted or fine-tuned for many downstream tasks. Examples include Claude, GPT-4, and Titan.
+- **Large Language Models** — A specific type of foundation model that specialises in text understanding and generation, usually built on transformer architecture. Examples include GPT-3.5, Claude, and LLaMA.
+- **Transformer Models** — The architectural backbone of modern LLMs. They process entire sentences simultaneously using attention mechanisms to understand context and relationships between words.
+- **Diffusion Models** — Generate high-quality images by learning to gradually remove noise from random data, reversing a corruption process during training. Example: Stable Diffusion.
+- **GANs** — Generative Adversarial Networks use two competing neural networks: a generator that creates content and a discriminator that detects fakes. This adversarial training helps produce realistic synthetic outputs.
 
 ---
 
-**Data Concepts**
-- **Structured Data** — Neatly organised, tabular data with defined fields and schemas, such as sales records, spreadsheets, or sensor readings — easy to query and analyse
-- **Unstructured Data** — Data with no predefined format including text, images, audio, and video; represents the vast majority of data generated in the world
-- **Training / Validation / Test Sets** — The standard three-way data split: training teaches the model, validation tunes hyperparameters and prevents overfitting, and the test set gives an unbiased final performance evaluation
-- **Bias (High)** — When a model is too simple to capture the underlying patterns in data, resulting in underfitting and poor performance on both training and new data
-- **Variance (High)** — When a model is overly complex and memorises the training data too closely, performing well in training but poorly on unseen data — known as overfitting
-- **Data Quality (4 Vs)** — Volume (enough data to learn from), Variety (diverse data reduces bias), Veracity (accuracy and trustworthiness of data), and Velocity (the speed at which new data is generated and processed)
+## Learning Types
+
+- **Supervised Learning** — Trains on labelled input-output pairs so the model can predict outcomes on new data. It covers both classification and regression.
+- **Unsupervised Learning** — Discovers hidden structure and patterns in unlabelled data using techniques like clustering, dimensionality reduction, and anomaly detection.
+- **Semi-supervised Learning** — Combines a small amount of labelled data with a large amount of unlabelled data. Useful when full labelling is too expensive or time-consuming.
+- **Reinforcement Learning** — An agent learns optimal behaviour through trial and error by receiving rewards for good actions and penalties for bad ones. Used in games and autonomous systems.
 
 ---
 
-**Text & Language AWS Services**
-- **Amazon Comprehend** — Your all-in-one NLP engine; detects sentiment, extracts key phrases, identifies people/places/organisations, flags PII, analyses syntax, and supports custom classification across 100+ languages
-- **Amazon Translate** — Provides real-time or batch language translation across 75+ languages with support for custom terminology dictionaries to match your specific domain or brand
-- **Amazon Textract** — Goes beyond basic OCR to intelligently extract structured text, form fields, and tables from scanned documents and PDFs while preserving the original layout
-- **Amazon Transcribe** — Converts speech to text in real time or in bulk batches, with support for speaker identification, custom vocabularies, and a dedicated medical version tuned for healthcare terminology
-- **Amazon Polly** — Transforms written text into natural, lifelike speech across 60+ voices and 29+ languages, with SSML support for pronunciation control and neural voice options for extra realism
+## Data Concepts
+
+- **Structured Data** — Neatly organised tabular data with defined fields and schemas, such as sales records, spreadsheets, or sensor readings.
+- **Unstructured Data** — Data with no predefined format, including text, images, audio, and video.
+- **Training Set** — The data used to teach the model.
+- **Validation Set** — The data used to tune hyperparameters and prevent overfitting.
+- **Test Set** — The data used for unbiased final performance evaluation.
+- **High Bias** — When a model is too simple to capture the underlying patterns in data. This causes underfitting and poor performance on both training and new data.
+- **High Variance** — When a model is too complex and memorises the training data too closely. This causes overfitting and poor performance on unseen data.
+- **Data Quality: Volume** — Enough data to learn from.
+- **Data Quality: Variety** — Diverse data that reduces bias.
+- **Data Quality: Veracity** — Accurate and trustworthy data.
+- **Data Quality: Velocity** — The speed at which new data is generated and processed.
 
 ---
 
-**Vision & Conversation AWS Services**
-- **Amazon Rekognition** — A managed computer vision service that analyses images and video to detect objects, scenes, text, faces, celebrities, motion patterns, inappropriate content, and custom labelled items
-- **Amazon Lex** — Builds intelligent chatbots and voice assistants with natural language understanding built in, integrating with Lambda for business logic and running across web, mobile, and Alexa interfaces
+## Text and Language AWS Services
+
+- **Amazon Comprehend** — An NLP service that detects sentiment, extracts key phrases, identifies people, places, and organisations, flags PII, analyses syntax, and supports custom classification across many languages.
+- **Amazon Translate** — Provides real-time or batch language translation with support for custom terminology dictionaries.
+- **Amazon Textract** — Extracts structured text, form fields, and tables from scanned documents and PDFs while preserving layout.
+- **Amazon Transcribe** — Converts speech to text in real time or batch mode. Supports speaker identification, custom vocabularies, and a medical version for healthcare terminology.
+- **Amazon Polly** — Converts written text into natural speech using standard and neural voices. Supports SSML for pronunciation control.
 
 ---
 
-**Recommendations & Search**
-- **Amazon Personalize** — Delivers real-time, individually tailored product and content recommendations using your own data, with no ML expertise required — ideal for serving the right item to the right customer at the right moment
-- **Amazon Forecast** — A time-series forecasting service that automates feature engineering and identifies seasonality patterns to support accurate business planning for demand, inventory, and resource allocation
-- **Amazon Kendra** — An intelligent enterprise search service that understands natural language questions, returns ranked relevant results, and learns from user behaviour to deliver smarter answers across connected data sources
+## Vision and Conversation AWS Services
+
+- **Amazon Rekognition** — A managed computer vision service that analyses images and video to detect objects, scenes, text, faces, celebrities, motion patterns, inappropriate content, and custom labelled items.
+- **Amazon Lex** — Builds chatbots and voice assistants with natural language understanding. It integrates with Lambda for business logic and can run across web, mobile, and Alexa interfaces.
 
 ---
 
-**Specialised AI Services**
-- **Amazon Fraud Detector** — Provides real-time fraud detection by leveraging built-in machine learning models or custom models you train, plugging directly into your transaction or account workflows
-- **Amazon DevOps Guru** — Uses ML to continuously monitor application and infrastructure behaviour, proactively spots operational anomalies, and recommends actionable fixes before users are impacted
-- **Amazon CodeGuru** — Automatically scans your codebase for bugs, performance inefficiencies, and security vulnerabilities, then suggests targeted improvements to reduce cost and boost overall code quality
-- **AWS DeepRacer** — A physical 1/18-scale autonomous race car and simulation environment designed to teach reinforcement learning concepts in a fun, hands-on, competitive way
+## Recommendations and Search
+
+- **Amazon Personalize** — Delivers real-time, individually tailored product and content recommendations using your own data, without requiring ML expertise.
+- **Amazon Forecast** — A time-series forecasting service that automates feature engineering and identifies seasonality patterns for demand, inventory, and resource planning.
+- **Amazon Kendra** — An intelligent enterprise search service that understands natural language questions, returns ranked relevant results, and learns from user behaviour.
 
 ---
 
-**Generative AI Services**
-- **Amazon Bedrock** — A fully managed, serverless platform that removes infrastructure complexity so you can access, test, and customise multiple foundation models from different providers with enterprise-grade security and pay-as-you-go pricing
-- **Amazon PartyRock** — A no-code, drag-and-drop GenAI app builder with a playful interface, ideal for rapid prototyping and building AI-powered demos without writing a single line of code, all powered by Bedrock
-- **Amazon Q Business** — An AI assistant built for business users that instantly answers questions sourced from company documents, summarises content, automates workflows, and enforces smart access permissions for enterprise search
-- **Amazon Q Developer** — An AI coding assistant for developers that helps write, complete, and debug code, design cloud architectures, enforce security best practices, and optimise costs within the development workflow
+## Specialised AI Services
+
+- **Amazon Fraud Detector** — Provides real-time fraud detection using built-in ML models or custom models trained on your own data.
+- **Amazon DevOps Guru** — Uses ML to monitor application and infrastructure behaviour, detect operational anomalies, and recommend fixes.
+- **Amazon CodeGuru** — Scans code for bugs, performance issues, and security vulnerabilities, then suggests improvements.
+- **AWS DeepRacer** — A physical and simulated autonomous race car environment used to teach reinforcement learning concepts.
 
 ---
 
-**ML Platform: SageMaker**
-- **SageMaker Studio** — A fully integrated ML IDE providing a unified environment with JupyterLab and R Studio support, a visual drag-and-drop workflow builder, and easy notebook and experiment sharing for team collaboration
-- **SageMaker Feature Store** — A centralised repository for storing, versioning, and serving ML features with time-travel capability to access historical snapshots, supporting both online real-time and offline batch serving
-- **SageMaker Data Wrangler** — A visual data preparation tool with over 300 built-in transformations, built-in data quality insights, early bias detection, and flexible export options to streamline the data prep pipeline
-- **SageMaker Ground Truth** — Combines human-in-the-loop data labelling with active learning to progressively reduce annotation costs, supporting internal teams, third-party vendors, or crowdsourced labellers via customisable workflows
-- **SageMaker Pipelines** — Enables building automated, CI/CD-style ML workflows with step-by-step pipeline definitions, Git integration, and reproducible experiment tracking for consistent, scalable MLOps practices
-- **SageMaker Canvas** — A no-code AutoML interface designed for business analysts that provides drag-and-drop model building with automated ML capabilities, requiring no programming knowledge and integrating easily with business data sources
-- **SageMaker Clarify** — Detects and measures bias in both training data and trained models, provides human-readable explanations of model predictions, and monitors fairness continuously across the full ML pipeline
-- **SageMaker Model Monitor** — Continuously tracks deployed model performance in production, detects data drift and quality degradation over time, and sends alerts when model behaviour deviates from the expected baseline
-- **MLflow on SageMaker** — Provides experiment tracking, model version management, model registry, and streamlined deployment orchestration, making it easier to manage the full ML model lifecycle in one place
+## Generative AI Services
 
-**SageMaker Inference Types**
-- **Real-time Inference** — Always-on persistent endpoints that return predictions instantly with minimal latency; best suited for live, user-facing applications where delays are unacceptable, though at higher ongoing cost
-- **Batch Inference** — Processes large volumes of data offline on a defined schedule without a persistent endpoint; highly cost-effective for bulk workloads where immediate responses are not required
-- **Serverless Inference** — Automatically scales capacity up and down — including to zero when idle — with a pay-per-request model; ideal for intermittent or dev/test workloads, but be aware of cold-start latency
-- **Asynchronous Inference** — Uses a queue-based approach to handle large input payloads and complex, long-running inference tasks without blocking the caller; perfect for batch-like scenarios that still need individual request tracking
-
-**Built-in SageMaker Algorithms**
-- **KNN (K-Nearest Neighbours)** — A simple distance-based algorithm used for classification and regression tasks by comparing new data points to their nearest neighbours
-- **Linear Learner** — Trains linear and logistic regression models efficiently for classification and regression on structured data
-- **XGBoost** — A powerful gradient boosting algorithm widely used for structured/tabular data, known for strong performance in competitions and real-world scenarios
-- **PCA (Principal Component Analysis)** — Reduces the number of features in a dataset while retaining the most important variance, used for dimensionality reduction and noise removal
-- **K-Means** — An unsupervised clustering algorithm that groups data points into K clusters based on feature similarity
-- **Random Cut Forest** — An unsupervised anomaly detection algorithm that identifies unusual data points by measuring how isolated they are from the rest of the dataset
+- **Amazon Bedrock** — A fully managed, serverless platform for accessing, testing, and customising foundation models from different providers with enterprise-grade security.
+- **Amazon PartyRock** — A no-code GenAI app builder powered by Bedrock. Useful for rapid prototyping and AI-powered demos.
+- **Amazon Q Business** — An AI assistant for business users that answers questions from company documents, summarises content, automates workflows, and respects access permissions.
+- **Amazon Q Developer** — An AI coding assistant that helps write, complete, debug, and optimise code. It can also support architecture, security, and cost optimisation tasks.
 
 ---
 
-**Compute Infrastructure**
-- **Deep Learning AMIs** — Pre-configured virtual machine images with popular ML frameworks like TensorFlow and PyTorch already installed and optimised for both GPU and CPU workloads on EC2
-- **Deep Learning Containers** — Portable Docker containers pre-loaded with optimised ML frameworks, enabling consistent, reproducible environments across development, testing, and production on AWS
-- **AWS Inferentia** — Custom-designed ML inference chips built by AWS that deliver up to 80% cost savings compared to GPU instances, optimised specifically for transformer-based model inference
-- **Amazon Elastic Inference** — Allows you to attach right-sized, fractional GPU acceleration to any EC2 or SageMaker instance, reducing inference costs by avoiding the need for full GPU instances
+## ML Platform: Amazon SageMaker
+
+### SageMaker Core Services
+
+- **SageMaker Studio** — A fully integrated ML IDE with JupyterLab and RStudio support. It provides notebooks, experiment management, visual workflows, and team collaboration features.
+- **SageMaker Feature Store** — A central repository for storing, versioning, and serving ML features. It supports historical snapshots, online serving, and offline batch access.
+- **SageMaker Data Wrangler** — A visual data preparation tool with built-in transformations, data quality insights, bias detection, and export options.
+- **SageMaker Ground Truth** — A data labelling service that supports human-in-the-loop labelling, active learning, internal teams, vendors, and crowdsourced labellers.
+- **SageMaker Pipelines** — Enables automated ML workflows with step-by-step pipeline definitions, Git integration, and reproducible experiment tracking.
+- **SageMaker Canvas** — A no-code AutoML interface for business analysts. It supports drag-and-drop model building without programming.
+- **SageMaker Clarify** — Detects bias in training data and trained models, explains model predictions, and supports fairness monitoring.
+- **SageMaker Model Monitor** — Tracks deployed model performance in production, detects data drift and quality degradation, and sends alerts.
+- **MLflow on SageMaker** — Provides experiment tracking, model version management, model registry, and deployment orchestration.
+
+### SageMaker Inference Types
+
+- **Real-time Inference** — Always-on persistent endpoints that return predictions instantly with minimal latency. Best for live, user-facing applications where delays are unacceptable.
+- **Batch Inference** — Processes large volumes of data offline on a defined schedule without a persistent endpoint. Best for bulk workloads where immediate responses are not required.
+- **Serverless Inference** — Automatically scales capacity up and down, including to zero when idle. Best for intermittent or dev/test workloads, but cold-start latency can occur.
+- **Asynchronous Inference** — Uses a queue-based approach for large input payloads and long-running inference tasks. Best when the caller does not need to wait synchronously.
+
+### Built-in SageMaker Algorithms
+
+- **KNN** — K-Nearest Neighbours is a distance-based algorithm used for classification and regression by comparing new data points to their nearest neighbours.
+- **Linear Learner** — Trains linear and logistic regression models efficiently for classification and regression on structured data.
+- **XGBoost** — A gradient boosting algorithm widely used for structured and tabular data.
+- **PCA** — Principal Component Analysis reduces the number of features while retaining important variance. Used for dimensionality reduction and noise removal.
+- **K-Means** — An unsupervised clustering algorithm that groups data points into K clusters based on feature similarity.
+- **Random Cut Forest** — An unsupervised anomaly detection algorithm that identifies unusual data points by measuring how isolated they are from the rest of the dataset.
 
 ---
 
-**RAG (Retrieval Augmented Generation)**
-- **RAG** — A technique that grounds LLM responses in real, verifiable external data by retrieving relevant document chunks before generating an answer, directly addressing the hallucination problem
-- **Vector Embeddings** — High-dimensional mathematical representations that capture the semantic meaning of text, so that similar concepts are positioned close together in vector space — the core of AI-powered search
-- **Vector Databases** — Specialised databases that store and enable fast similarity-based search over vector embeddings, linking them back to source documents (e.g. OpenSearch, Pinecone, Redis, Chroma, Aurora pgvector)
-- **Retrieve & Generate API** — A single Bedrock API call that executes the complete RAG workflow end-to-end, maintains conversation context, and returns a grounded answer with source attribution
-- **Retrieve API** — Returns only the relevant document chunks from a knowledge base without generating a response, giving you full control over how you construct and present the final answer
-- **Hybrid Search** — Combines semantic vector search with traditional keyword matching in a single query, improving both recall (finding more relevant results) and precision (filtering out irrelevant ones)
+## Compute Infrastructure
 
-**RAG vs Fine-tuning**
-- **RAG** — The preferred choice when data changes frequently (news, policies, catalogues), when citations and traceability are required, or when cost and deployment speed are priorities
-- **Fine-tuning** — The right approach when you need a specific tone, brand voice, or behavioural consistency, when your domain has specialised jargon, or when the model needs to learn a pattern rather than just retrieve information
-- **Continued Pre-training** — Extends a model's pre-training using unlabelled domain-specific data to deepen its general knowledge of a field, as opposed to fine-tuning which uses labelled task-specific data for sharper task performance
+- **Deep Learning AMIs** — Pre-configured virtual machine images with popular ML frameworks such as TensorFlow and PyTorch installed and optimised for EC2.
+- **Deep Learning Containers** — Docker containers pre-loaded with optimised ML frameworks for consistent environments across development, testing, and production.
+- **AWS Inferentia** — AWS-designed ML inference chips optimised for low-cost, high-performance inference workloads, especially transformer-based models.
+- **Amazon Elastic Inference** — Allows right-sized GPU acceleration to be attached to EC2 or SageMaker instances to reduce inference costs.
 
 ---
 
-**Bedrock Agents**
-- **Bedrock Agents** — Intelligent, action-driven digital assistants that go far beyond scripted chatbots — they interpret user intent, reason through complexity, plan multi-step strategies, and execute real-world actions autonomously
-- **Action Groups** — Define the set of external APIs an agent is authorised to call, specified using OpenAPI schemas and connected to business systems via AWS Lambda functions
-- **Multi-agent Collaboration** — Enables multiple specialist agents to handle different domains or sub-tasks, coordinating handoffs and workflows to orchestrate complex, enterprise-scale automation scenarios
-- **Bedrock Guardrails** — Configurable safety filters that block harmful, biased, or policy-violating content, detect and redact PII, and defend against prompt injection attacks — customisable to your specific use case
+## RAG: Retrieval Augmented Generation
+
+- **RAG** — A technique that grounds LLM responses in external data by retrieving relevant document chunks before generating an answer. It helps reduce hallucination.
+- **Vector Embeddings** — High-dimensional mathematical representations that capture semantic meaning. Similar concepts are positioned close together in vector space.
+- **Vector Databases** — Databases designed for fast similarity search over vector embeddings. Examples include OpenSearch, Pinecone, Redis, Chroma, and Aurora pgvector.
+- **Retrieve and Generate API** — A Bedrock API that executes the complete RAG workflow, maintains conversation context, and returns grounded answers with source attribution.
+- **Retrieve API** — Returns relevant document chunks from a knowledge base without generating a response. Useful when you want full control over the final answer.
+- **Hybrid Search** — Combines semantic vector search with traditional keyword search to improve recall and precision.
+
+### RAG vs Fine-tuning
+
+- **RAG** — Best when data changes frequently, when citations are required, or when cost and speed matter.
+- **Fine-tuning** — Best when you need a specific tone, brand voice, behavioural pattern, or domain-specific response style.
+- **Continued Pre-training** — Extends a model’s pre-training using unlabelled domain-specific data to deepen its knowledge of a field.
 
 ---
 
-**Security Services**
-- **IAM** — The backbone of AWS access control; defines who (users, groups, roles) can do what (policies) across all AWS services, following the principle of least privilege
-- **AWS KMS** — Centrally manages encryption keys backed by HSMs, supports automatic key rotation, and integrates across AWS services to secure both data at rest and in transit
-- **Amazon Macie** — Uses ML to automatically discover, classify, and alert on sensitive data (particularly PII) stored in S3, helping maintain data privacy and regulatory compliance
-- **AWS Secrets Manager** — Securely stores sensitive credentials like API keys, database passwords, and tokens, with automated rotation and fine-grained access control and full audit logging
-- **AWS WAF** — A Layer-7 web application firewall that protects against common web exploits including SQL injection, cross-site scripting (XSS), and bot traffic, with real-time visibility into threats
-- **AWS Shield** — Provides always-on DDoS protection at the Standard tier for all AWS customers, with Advanced tier adding 24/7 expert support and deeper protection at the network and transport layers
-- **AWS Network Firewall** — A managed stateful firewall with deep packet inspection capability, supporting custom rules and threat intelligence feeds to protect traffic flowing within your VPCs
-- **AWS CloudTrail** — Records every API call made in your AWS account, providing an immutable audit trail essential for security investigations, compliance audits, and forensic analysis
-- **Amazon GuardDuty** — A managed ML-powered threat detection service that continuously analyses account activity and network behaviour using AWS threat intelligence feeds, with support for automated response actions
-- **Amazon Inspector** — Continuously scans EC2 instances and container workloads for known software vulnerabilities and unintended network exposures, prioritising findings by severity for faster remediation
-- **AWS Security Hub** — Aggregates and normalises security alerts from multiple AWS and third-party tools into a single centralised view, scoring your compliance posture and supporting automated remediation workflows
+## Bedrock Agents
+
+- **Bedrock Agents** — Action-driven AI assistants that interpret user intent, plan multi-step tasks, and execute actions using connected systems.
+- **Action Groups** — Define external APIs that an agent can call. They are specified using OpenAPI schemas and connected to business systems through AWS Lambda.
+- **Multi-agent Collaboration** — Allows multiple specialist agents to handle different domains or sub-tasks and coordinate complex workflows.
+- **Bedrock Guardrails** — Safety controls that block harmful content, redact PII, reduce prompt injection risk, and enforce application-specific policies.
 
 ---
 
-**Responsible AI**
-- **8 Pillars** — The core framework for ethical AI: Fairness, Explainability, Privacy & Security, Safety, Controllability, Veracity & Robustness, Governance, and Transparency — each addressing a different dimension of responsible system design
-- **Hallucination** — When an LLM confidently generates text that sounds plausible but is factually incorrect; the primary mitigation is RAG, which grounds responses in verified real-world data
-- **Toxicity** — When a model generates offensive, harmful, or inappropriate content; mitigated by implementing aggressive content filters and guardrails at both input and output stages
-- **Prompt Injection** — An attack where malicious input tricks the model into ignoring its original instructions or system prompt; mitigated with strict prompt templates and thorough input validation
-- **Prompt Leakage** — An attack aimed at extracting hidden or confidential system prompts from the model; mitigated through secure prompt design practices and strict access controls
-- **Jailbreaking** — Attempts to bypass a model's built-in safety filters through clever phrasing or roleplay scenarios; mitigated via red teaming exercises and robust, layered content filtering
-- **Data Poisoning** — Deliberately injecting corrupted or malicious data into the training pipeline to skew model behaviour; mitigated through rigorous data validation and source verification
-- **Model Extraction** — Reverse-engineering a proprietary model's behaviour by querying it systematically; mitigated using rate limiting on API calls and differential privacy techniques
-- **Amazon Augmented AI (A2I)** — Inserts a human review step into the ML prediction workflow for sensitive or low-confidence outputs, supporting custom review workflows with internal or third-party reviewers
+## Security Services
+
+- **IAM** — Defines who can access what across AWS using users, groups, roles, and policies. It supports the principle of least privilege.
+- **AWS KMS** — Manages encryption keys backed by HSMs. Supports key rotation and integrates with many AWS services.
+- **Amazon Macie** — Uses ML to discover, classify, and alert on sensitive data such as PII stored in S3.
+- **AWS Secrets Manager** — Stores credentials such as API keys, database passwords, and tokens with rotation, access control, and audit logging.
+- **AWS WAF** — A Layer 7 web application firewall that protects against common web exploits such as SQL injection, cross-site scripting, and bot traffic.
+- **AWS Shield** — Provides DDoS protection. Shield Standard is enabled for all AWS customers, while Shield Advanced adds enhanced support and protections.
+- **AWS Network Firewall** — A managed stateful firewall with deep packet inspection, custom rules, and threat intelligence feed support.
+- **AWS CloudTrail** — Records API calls made in an AWS account. Used for auditing, compliance, investigations, and forensics.
+- **Amazon GuardDuty** — A managed threat detection service that analyses account activity and network behaviour using AWS threat intelligence.
+- **Amazon Inspector** — Scans EC2 instances and container workloads for software vulnerabilities and unintended network exposure.
+- **AWS Security Hub** — Aggregates and normalises security findings from AWS and third-party tools into a centralised security view.
 
 ---
 
-**Prompt Engineering**
-- **Zero-shot Prompting** — Providing a clear, direct instruction to the model with no supporting examples; works best for simple, well-understood tasks where the model already has the required knowledge
-- **Few-shot Prompting** — Supplying two to three worked examples within the prompt to teach the model the expected pattern or format; most effective for complex or nuanced output requirements
-- **Chain-of-Thought Prompting** — Explicitly instructing the model to reason through a problem step by step before giving an answer; significantly improves accuracy on logic, maths, and multi-step reasoning tasks
-- **Negative Prompting** — Telling the model what to avoid or exclude in its response, rather than only what to include; effective for preventing common errors, off-topic tangents, or unwanted tones
-- **Role-based Prompting** — Assigning the model a specific professional persona or expert role before asking a question; helps focus responses with domain-appropriate depth and tone
-- **Prompt Chaining** — Breaking a complex task into a sequence of smaller, focused prompts where the output of one feeds into the next; keeps responses structured, accurate, and easier to validate
-- **Temperature** — A parameter (0.0–1.0) that controls how creative or random the model's outputs are; low values produce conservative and predictable responses, high values produce more creative and varied ones — it does NOT affect speed
-- **Top P (Nucleus Sampling)** — Controls the breadth of the token pool the model samples from; low Top P keeps word choices tight and consistent, while high Top P allows broader and more varied vocabulary
-- **Top K** — Restricts token selection to the top K most probable next tokens; low K keeps output focused and safe, high K allows a wider range of language variety — used alongside temperature for nuanced control
-- **Max Tokens** — Sets the upper limit on how long a generated response can be; a key lever for managing API costs, enforcing output brevity, and fitting within model context window limits
-- **Stop Sequences** — Specific strings or characters that signal the model to immediately stop generating output; useful for enforcing clean output boundaries like stopping after a closing tag or delimiter
+## Responsible AI
+
+- **Fairness** — Ensures AI systems do not create or amplify unfair bias.
+- **Explainability** — Makes model decisions understandable to humans.
+- **Privacy and Security** — Protects user data and prevents unauthorised access.
+- **Safety** — Reduces the risk of harmful or unsafe model behaviour.
+- **Controllability** — Allows humans and systems to guide or limit model behaviour.
+- **Veracity and Robustness** — Ensures outputs are accurate, reliable, and resilient.
+- **Governance** — Defines ownership, controls, review processes, and accountability.
+- **Transparency** — Makes it clear how AI systems are used and what limitations they have.
+- **Hallucination** — When an LLM confidently generates incorrect information. RAG is a common mitigation.
+- **Toxicity** — Offensive, harmful, or inappropriate model output. Mitigated using content filters and guardrails.
+- **Prompt Injection** — A malicious input that tries to override the model’s original instructions. Mitigated with strict prompt templates and input validation.
+- **Prompt Leakage** — An attempt to extract hidden system prompts or confidential instructions. Mitigated with secure prompt design and access controls.
+- **Jailbreaking** — Attempts to bypass model safety controls through clever phrasing or roleplay. Mitigated through red teaming and layered content filtering.
+- **Data Poisoning** — Deliberately corrupting training data to influence model behaviour. Mitigated with data validation and source verification.
+- **Model Extraction** — Attempting to reverse-engineer a proprietary model by querying it systematically. Mitigated using rate limits and privacy techniques.
+- **Amazon Augmented AI** — Adds human review into ML workflows for sensitive or low-confidence predictions.
 
 ---
 
-**Healthcare AI**
-- **Amazon HealthLake** — A HIPAA-compliant service that aggregates, normalises, and stores health data from multiple sources in FHIR format, applies NLP to medical records, and prepares data for downstream ML analysis
-- **Amazon Comprehend Medical** — Extracts clinically relevant information such as medical conditions, medications, dosages, and protected health information (PHI) directly from unstructured clinical notes without requiring custom training data
-- **Amazon Transcribe Medical** — A speech-to-text service fine-tuned specifically for the healthcare domain, accurately recognising medical terminology and doctor-patient conversation patterns while remaining fully HIPAA compliant
+## Prompt Engineering
+
+- **Zero-shot Prompting** — Giving a clear instruction without examples. Best for simple and well-understood tasks.
+- **Few-shot Prompting** — Providing a few examples to teach the expected pattern or format.
+- **Chain-of-Thought Prompting** — Asking the model to reason step by step before answering. Useful for logic, maths, and multi-step reasoning.
+- **Negative Prompting** — Telling the model what to avoid or exclude.
+- **Role-based Prompting** — Assigning the model a specific expert role or persona to guide the response.
+- **Prompt Chaining** — Breaking a complex task into smaller prompts where each output feeds into the next step.
+- **Temperature** — Controls randomness and creativity. Lower values are more predictable, while higher values are more varied. It does not control speed.
+- **Top P** — Controls the breadth of the token pool used for generation. Lower values make output tighter and more focused.
+- **Top K** — Restricts token selection to the top K most probable next tokens.
+- **Max Tokens** — Sets the maximum output length and helps manage cost and response size.
+- **Stop Sequences** — Specific strings that tell the model when to stop generating.
+
+---
+
+## Healthcare AI
+
+- **Amazon HealthLake** — A HIPAA-compliant service that stores, normalises, and analyses health data in FHIR format.
+- **Amazon Comprehend Medical** — Extracts medical conditions, medications, dosages, and protected health information from clinical notes.
+- **Amazon Transcribe Medical** — A speech-to-text service tuned for medical terminology and doctor-patient conversations.
+```
