@@ -39,6 +39,22 @@
 
 ---
 
+## Model Evaluation Metrics
+
+- **Classification Model Metrics** — Use metrics such as **Accuracy**, **Precision**, **Recall**, and **F1 Score** to evaluate classification models.
+- **Accuracy** — Measures the percentage of correct predictions out of all predictions. It is commonly used when classes are balanced.
+- **Precision** — Measures how many predicted positives are actually positive. Useful when false positives are costly.
+- **Recall** — Measures how many actual positives were correctly identified. Useful when false negatives are costly.
+- **F1 Score** — Harmonic mean of precision and recall. Useful when you need a balance between precision and recall, especially with imbalanced classes.
+- **Regression Model Metrics** — Use metrics such as **Mean Squared Error (MSE)**, **Mean Absolute Error (MAE)**, and **R² Score** to evaluate regression models.
+- **MSE** — Regression metric that measures the average squared difference between predicted and actual values.
+- **MAE** — Regression metric that measures the average absolute difference between predicted and actual values.
+- **R² Score** — Regression metric that measures how well the model explains variation in the target variable.
+
+**Exam Hint:** For a classification model, the most appropriate metric among MSE, Accuracy, R² Score, and MAE is **Accuracy**. MSE, MAE, and R² Score are mainly used for regression problems.
+
+---
+
 ## Text and Language AWS Services
 
 - **Amazon Comprehend** — An NLP service that detects sentiment, extracts key phrases, identifies people, places, and organisations, flags PII, analyses syntax, and supports custom classification across many languages.
