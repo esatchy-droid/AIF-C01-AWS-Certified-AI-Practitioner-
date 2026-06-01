@@ -207,3 +207,33 @@
 - **Amazon HealthLake** — A HIPAA-compliant service that stores, normalises, and analyses health data in FHIR format.
 - **Amazon Comprehend Medical** — Extracts medical conditions, medications, dosages, and protected health information from clinical notes.
 - **Amazon Transcribe Medical** — A speech-to-text service tuned for medical terminology and doctor-patient conversations. 
+
+| Acronym | Full Form / Meaning                                 |
+| ------- | --------------------------------------------------- |
+| AI      | Artificial Intelligence                             |
+| ML      | Machine Learning                                    |
+| LLM     | Large Language Model                                |
+| GAN     | Generative Adversarial Network                      |
+| NLP     | Natural Language Processing                         |
+| PII     | Personally Identifiable Information                 |
+| SSML    | Speech Synthesis Markup Language                    |
+| GenAI   | Generative AI                                       |
+| IDE     | Integrated Development Environment                  |
+| AutoML  | Automated Machine Learning                          |
+| KNN     | K-Nearest Neighbours                                |
+| PCA     | Principal Component Analysis                        |
+| AMI     | Amazon Machine Image                                |
+| EC2     | Amazon Elastic Compute Cloud                        |
+| GPU     | Graphics Processing Unit                            |
+| RAG     | Retrieval Augmented Generation                      |
+| API     | Application Programming Interface                   |
+| IAM     | Identity and Access Management                      |
+| KMS     | Key Management Service                              |
+| HSM     | Hardware Security Module                            |
+| WAF     | Web Application Firewall                            |
+| DDoS    | Distributed Denial of Service                       |
+| SQL     | Structured Query Language                           |
+| S3      | Amazon Simple Storage Service                       |
+| HIPAA   | Health Insurance Portability and Accountability Act |
+| FHIR    | Fast Healthcare Interoperability Resources          |
+
